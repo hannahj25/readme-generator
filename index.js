@@ -57,7 +57,7 @@ const promptUser = () => {
             message: 'Enter some intructions on how to contact you with questions.',
         },
     ])
-}
+};
 
 //const questions = [];
 
@@ -77,7 +77,12 @@ const generateReadMe = ({title, description, installation, usage, contribution, 
 function writeToFileSync(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+const init = () => {
+    promptUser()
+    .then((answers) => fs.writeFileSync('README.md', generateReadMe(answers)))
+    .then(() => console.log('Successfully wrote to README.md.'))
+    .catch((err) => console.error(err));
+}
 
 // Function call to initialize app
 init();
