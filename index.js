@@ -32,8 +32,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'tests',
-            //What to write here
-            message: '???'
+            message: 'Explain how to run tests.'
         },
         {
             type: 'list',
@@ -74,7 +73,7 @@ const generateReadMe = ({title, description, installation, usage, contribution, 
 `
 
 // TODO: Create a function to write README file
-function writeToFileSync(fileName, data) {}
+// function writeToFileSync(fileName, data) {}
 
 // TODO: Create a function to initialize app
 const init = () => {
