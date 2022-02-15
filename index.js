@@ -22,7 +22,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'usage',
-            message: 'Describe how your project can be used.',
+            message: 'Describe how your your project can be used.',
         },
         {
             type: 'input',
@@ -55,6 +55,11 @@ const promptUser = () => {
             name: 'contact',
             message: 'Enter some intructions on how to contact you with questions. (Your GitHub and email address will be displayed belowed these instructions.)',
         },
+        {
+            type: 'input',
+            name: 'acknowledgements',
+            message: 'Enter information regarding resources used and/or acknowledgements.'
+        }
     ])
 };
 
@@ -70,6 +75,7 @@ const generateReadMe = ({title, description, installation, usage, contribution, 
 \n -[Tests](#tests)
 \n -[License](#license)
 \n -[Questions](#questions)
+\n -[Acknowledgements](#acknowledgements)
 \n## Installation \n${installation}
 \n## Usage \n${usage}
 \n## Contribution Guidelines \n${contribution}
@@ -78,6 +84,7 @@ const generateReadMe = ({title, description, installation, usage, contribution, 
 \n## Questions \n${contact} 
 \nGitHub: https://github.com/${github} 
 \nEmail: ${email}
+\n## Acknowledgements \n${acknowledgements}
 `
 
 

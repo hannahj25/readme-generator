@@ -31,7 +31,7 @@ Then, simply answer the prompts! After all prompts have been answered, your READ
 
 The video below demonstrates how to install, run and use the app.
 
--insert video link here-
+https://watch.screencastify.com/v/PTyjnmBPhs09feWfNv0W
 
 ## License 
 This project is covered under the MIT license.
@@ -48,4 +48,8 @@ GitHub: https://github.com/hannahj25
 
 
 ## Acknowledgements
-Cristian Custodio (https://github.com/cristian-custodio) contributed to the project by helping address a bug in the table of contents linking.
+Cristian Custodio (https://github.com/cristian-custodio) contributed to the project by helping address a bug in the table of contents links in the generated READme.
+
+Resources: 
+
+License badge - https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
