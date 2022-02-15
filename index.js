@@ -38,7 +38,7 @@ const promptUser = () => {
             type: 'list',
             name: 'license',
             message: 'Choose a license.',
-            choices: [],
+            choices: ["test", "test2"],
         },
         {
             type: 'input',
@@ -53,32 +53,30 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'contact',
-            message: 'Enter some intructions on how to contact you with questions.',
+            message: 'Enter some intructions on how to contact you with questions. (Your GitHub and email address will be displayed belowed these instructions.)',
         },
     ])
 };
 
-//const questions = [];
 
 const generateReadMe = ({title, description, installation, usage, contribution, tests, license, github, email, contact}) =>
-`#${title}
-\n##Description \n${description}
-\n##Table of Contents
-\n##Installation \n${installation}
-\n##Usage \n${usage}
-\n##Contribution Guidelines \n${contribution}
-\n##Tests \n${tests}
-\n##License \n${license}
-\n##Questions \n${contact} \nGitHub: ${github} \nEmail: ${email}
+`# ${title}
+\n## Description \n${description}
+\n## Table of Contents
+\n## Installation \n${installation}
+\n## Usage \n${usage}
+\n## Contribution Guidelines \n${contribution}
+\n## Tests \n${tests}
+\n## License \n${license}
+\n## Questions \n${contact} \nGitHub: ${github} \nEmail: ${email}
 `
 
-// TODO: Create a function to write README file
-// function writeToFileSync(fileName, data) {}
+
 
 // TODO: Create a function to initialize app
 const init = () => {
     promptUser()
-    .then((answers) => fs.writeFileSync('README.md', generateReadMe(answers)))
+    .then((answers) => fs.writeFileSync('./other/README.md', generateReadMe(answers)))
     .then(() => console.log('Successfully wrote to README.md.'))
     .catch((err) => console.error(err));
 }
