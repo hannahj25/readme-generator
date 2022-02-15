@@ -66,7 +66,7 @@ const generateReadMe = ({title, description, installation, usage, contribution, 
 \n## Table of Contents
 \n -[Installation](#installation)
 \n -[Usage](#usage)
-\n -[Contribution Guidelines](#contribution guidelines)
+\n -[Contribution Guidelines](#contribution-guidelines)
 \n -[Tests](#tests)
 \n -[License](#license)
 \n -[Questions](#questions)
@@ -76,7 +76,7 @@ const generateReadMe = ({title, description, installation, usage, contribution, 
 \n## Tests \n${tests}
 \n## License \n This application is covered under the ${license} license.
 \n## Questions \n${contact} 
-\nGitHub: ${github} 
+\nGitHub: https://github.com/${github} 
 \nEmail: ${email}
 `
 
