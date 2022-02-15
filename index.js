@@ -64,7 +64,7 @@ const promptUser = () => {
 };
 
 // All the text to be written to READme file, with user inputs added
-const generateReadMe = ({title, description, installation, usage, contribution, tests, license, github, email, contact}) =>
+const generateReadMe = ({title, description, installation, usage, contribution, tests, license, github, email, contact, acknowledgements}) =>
 `![License](https://img.shields.io/badge/License-${license}-blue.svg)
 \n# ${title}
 \n## Description \n${description}
