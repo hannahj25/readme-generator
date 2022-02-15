@@ -38,7 +38,7 @@ const promptUser = () => {
             type: 'list',
             name: 'license',
             message: 'Choose a license.',
-            choices: ["test", "test2"],
+            choices: ["Apache_2.0", "MIT", "EPL_1.0", "Unlicense"],
         },
         {
             type: 'input',
@@ -60,15 +60,24 @@ const promptUser = () => {
 
 
 const generateReadMe = ({title, description, installation, usage, contribution, tests, license, github, email, contact}) =>
-`# ${title}
+`![License](https://img.shields.io/badge/License-${license}-blue.svg)
+\n# ${title}
 \n## Description \n${description}
 \n## Table of Contents
+\n -[Installation](#installation)
+\n -[Usage](#usage)
+\n -[Contribution Guidelines](#contribution guidelines)
+\n -[Tests](#tests)
+\n -[License](#license)
+\n -[Questions](#questions)
 \n## Installation \n${installation}
 \n## Usage \n${usage}
 \n## Contribution Guidelines \n${contribution}
 \n## Tests \n${tests}
-\n## License \n${license}
-\n## Questions \n${contact} \nGitHub: ${github} \nEmail: ${email}
+\n## License \n This application is covered under the ${license} license.
+\n## Questions \n${contact} 
+\nGitHub: ${github} 
+\nEmail: ${email}
 `
 
 
