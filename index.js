@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
+// Array of questions/prompts for user to answer
 const promptUser = () => {
     return inquirer.prompt ([
         {
@@ -58,7 +58,7 @@ const promptUser = () => {
     ])
 };
 
-
+// All the text to be written to READme file, with user inputs added
 const generateReadMe = ({title, description, installation, usage, contribution, tests, license, github, email, contact}) =>
 `![License](https://img.shields.io/badge/License-${license}-blue.svg)
 \n# ${title}
@@ -82,7 +82,7 @@ const generateReadMe = ({title, description, installation, usage, contribution, 
 
 
 
-// TODO: Create a function to initialize app
+// Runs app: user answers prompts, and their answers are written to a README file
 const init = () => {
     promptUser()
     .then((answers) => fs.writeFileSync('./other/README.md', generateReadMe(answers)))
